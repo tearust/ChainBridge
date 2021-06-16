@@ -9,7 +9,7 @@ import (
 	"testing"
 
 	utils "github.com/ChainSafe/ChainBridge/shared/ethereum"
-	"github.com/ChainSafe/chainbridge-utils/crypto/secp256k1"
+	"github.com/tearust/chainbridge-utils/crypto/secp256k1"
 )
 
 func NewClient(t *testing.T, endpoint string, kp *secp256k1.Keypair) *utils.Client {

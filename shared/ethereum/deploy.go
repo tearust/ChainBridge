@@ -13,7 +13,7 @@ import (
 	bridge "github.com/ChainSafe/ChainBridge/bindings/Bridge"
 	erc20Handler "github.com/ChainSafe/ChainBridge/bindings/ERC20Handler"
 	erc721Handler "github.com/ChainSafe/ChainBridge/bindings/ERC721Handler"
-	"github.com/ChainSafe/chainbridge-utils/keystore"
+	"github.com/tearust/chainbridge-utils/keystore"
 )
 
 var (

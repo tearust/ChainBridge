@@ -87,10 +87,11 @@ var (
 		Name:  "privateKey",
 		Usage: "Import a hex representation of a private key into a keystore.",
 	}
-	SubkeyNetworkFlag = &cli.StringFlag{
+	SubkeyNetworkFlag = &cli.Int64Flag{
 		Name:        "network",
 		Usage:       "Specify the network to use for the address encoding (substrate/polkadot/centrifuge)",
-		DefaultText: "substrate",
+		Value:       1,
+		DefaultText: "1",
 	}
 )
 

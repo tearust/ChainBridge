@@ -24,12 +24,12 @@ As the writer receives messages from the router, it constructs proposals. If a p
 package substrate
 
 import (
-	"github.com/ChainSafe/chainbridge-utils/blockstore"
-	"github.com/ChainSafe/chainbridge-utils/core"
-	"github.com/ChainSafe/chainbridge-utils/crypto/sr25519"
-	"github.com/ChainSafe/chainbridge-utils/keystore"
-	metrics "github.com/ChainSafe/chainbridge-utils/metrics/types"
-	"github.com/ChainSafe/chainbridge-utils/msg"
+	"github.com/tearust/chainbridge-utils/blockstore"
+	"github.com/tearust/chainbridge-utils/core"
+	"github.com/tearust/chainbridge-utils/crypto/sr25519"
+	"github.com/tearust/chainbridge-utils/keystore"
+	metrics "github.com/tearust/chainbridge-utils/metrics/types"
+	"github.com/tearust/chainbridge-utils/msg"
 	"github.com/ChainSafe/log15"
 )
 

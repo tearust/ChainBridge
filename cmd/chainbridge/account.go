@@ -63,9 +63,7 @@ func handleGenerateCmd(ctx *cli.Context, dHandler *dataHandler) error {
 		password = []byte(pwdflag)
 	}
 
-	// todo use SubkeyNetworkFlag later
-	//_, err := generateKeypair(keytype, dHandler.datadir, password, ctx.String(config.SubkeyNetworkFlag.Name))
-	_, err := generateKeypair(keytype, dHandler.datadir, password, 1)
+	_, err := generateKeypair(keytype, dHandler.datadir, password, uint8(config.SubkeyNetworkFlag.Value))
 	if err != nil {
 		return fmt.Errorf("failed to generate key: %w", err)
 	}
@@ -160,9 +158,8 @@ func importPrivKey(ctx *cli.Context, keytype, datadir, key string, password []by
 
 	if keytype == crypto.Sr25519Type {
 		// generate sr25519 keys
-		// todo use SubkeyNetworkFlag later
-		//network := ctx.Value(config.SubkeyNetworkFlag.Name)
-		kp, err = sr25519.NewKeypairFromSeed(key, 1)
+		network := uint8(config.SubkeyNetworkFlag.Value)
+		kp, err = sr25519.NewKeypairFromSeed(key, network)
 		if err != nil {
 			return "", fmt.Errorf("could not generate sr25519 keypair from given string: %w", err)
 		}

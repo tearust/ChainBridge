@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"math/big"
 
-	events "github.com/ChainSafe/chainbridge-substrate-events"
+	events "github.com/tearust/chainbridge-substrate-events"
 	"github.com/tearust/chainbridge-utils/msg"
 	"github.com/ChainSafe/log15"
 )
